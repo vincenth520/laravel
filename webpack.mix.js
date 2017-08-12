@@ -1,14 +1,8 @@
 let mix = require('laravel-mix');
 
 /*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
+ Laravel Mix 提供了一套流式 API，使用一些通用的 CSS 和 JavaScript 预处理器为 Laravel 应用定义 Webpack 构建步骤。
+ 通过简单的方法链，你可以流式定义资源管道
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
