@@ -11,10 +11,9 @@ $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
 
-// This file allows us to emulate Apache's "mod_rewrite" functionality from the
-// built-in PHP web server. This provides a convenient way to test a Laravel
-// application without having installed a "real" web server software here.
-if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
+// 如果当前路径不是根目录，并且这个文件在public目录下，则直接退出，否则指向public/index.php
+
+if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {  
     return false;
 }
 
